@@ -363,11 +363,11 @@ CURL_RC_FLAGS = $(CURL_RC_FLAGS) /dCURL_EMBED_MANIFEST
 
 # Runtime library configuration
 !IF "$(RTLIBCFG)"=="static"
-RTLIB = /MT
-RTLIB_DEBUG = /MTd
+RTLIB = /MT /Od
+RTLIB_DEBUG = /MTd /Od
 !ELSE
-RTLIB = /MD
-RTLIB_DEBUG  = /MDd
+RTLIB = /MD /Od
+RTLIB_DEBUG  = /MDd /Od
 !ENDIF
 
 !IF "$(MODE)"=="static"
